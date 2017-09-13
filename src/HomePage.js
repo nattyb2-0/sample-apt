@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-
+import pic6 from './images/Building9.jpg'
 
 export default class HomePage extends React.Component{
   //header should be a component with navigation
@@ -10,7 +10,11 @@ export default class HomePage extends React.Component{
   render(){
 
     const navLinks = ['Find Apartment', 'List Apartment', 'Facebook', 'Instagram']
-
+    // var divStyle = {
+    //   backgroundImage: house,
+    //   backgroundSize: 'cover'
+    // };
+    // console.log(divStyle)
     return(
         <div>
           <header>
@@ -32,8 +36,22 @@ export default class HomePage extends React.Component{
 
 
           </header>
-          <div className="mainsearch">
+          <div className="mainsearch" style={{backgroundImage: `${pic6}`}}>
 
+            <form action="">
+              <div className="searchtitle">Find Your Next Rental Now</div>
+              <select className='borderrounded'>
+                <option value='disabled'  disabled>SELECT A SEARCH AREA</option>
+                <option value="mamba point">Mamba Point</option>
+                <option value="down town" defaultValue>Down Town</option>
+                <option value="sinkor">Sinkor</option>
+                <option value="old road">Old Road</option>
+                <option value="congo town">Congo Town</option>
+
+              </select>
+
+              <button className='borderrounded'>Search <i className="fa fa-search" aria-hidden="true"></i></button>
+            </form>
           </div>
           <div className="about">
           </div>
